@@ -1,5 +1,11 @@
 "use strict";
 
+// Variables to hold operations - use to display on calculator -----------------
+let num1 = null;
+let num2 = null;
+let operator = null;
+
+
 function add(a, b) {
     return a + b;
 }
