@@ -40,6 +40,16 @@ function divide(a, b) {
     return a / b;
 }
 
+const textResult = document.querySelector('textarea');
+const buttons = document.querySelectorAll('.flex-button');
+buttons.forEach((button) => {
+    button.addEventListener("mouseover", () => {
+        button.style.backgroundColor = "#BFEAF5";
+    })
+
+});
+
+
 console.log("1 + 2 = " + add(1, 2));
 console.log("2 - 1 = " + subtract(2, 1));
 console.log("1 * 2 = " + multiply(1, 2));
