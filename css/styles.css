@@ -38,10 +38,23 @@ body {
     display: flex;
     width: 8vw;
     height: 8vw;
-    margin-top: .9vw;
     border: .1rem solid #D6E4E5;
     background-color: #EFF5F5;
     justify-content: center;
     align-items: center;
     color: #497174;
+}
+
+#result textarea {
+    display: flex;
+    width: 38vw;
+    height: 8vw;
+    margin-top: .9vw;
+    background-color: rgb(228, 228, 228);
+    border: .1rem solid #D6E4E5;
+}
+
+textarea {
+    text-align: end;
+    font-size: 6vw;
 }
