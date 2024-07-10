@@ -8,3 +8,23 @@
 ::after {
     box-sizing: border-box;
 }
+
+/* colors
+EFF5F5 - background
+D6E4E5 - border
+497174 - text
+EB6440 - error
+*/
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    width: 40vw;
+    height: 40vw;
+    border: .1rem solid #D6E4E5;
+    background-color: #EFF5F5;
+}
