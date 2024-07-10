@@ -41,17 +41,19 @@ function divide(a, b) {
 }
 
 const textResult = document.querySelector('textarea');
-const buttons = document.querySelectorAll('.flex-button');
+const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener("mouseover", () => {
         button.style.backgroundColor = "#BFEAF5";
     }),
     button.addEventListener("mouseleave", () => {
         button.style.backgroundColor = "#EFF5F5";
+    }),
+    button.addEventListener("click", (event) => {
+        let tempNum = event.target.innerHTML;
+        textResult.innerHTML = tempNum;
     })
 });
-
-
 
 console.log("1 + 2 = " + add(1, 2));
 console.log("2 - 1 = " + subtract(2, 1));
