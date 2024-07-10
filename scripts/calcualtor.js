@@ -45,9 +45,12 @@ const buttons = document.querySelectorAll('.flex-button');
 buttons.forEach((button) => {
     button.addEventListener("mouseover", () => {
         button.style.backgroundColor = "#BFEAF5";
+    }),
+    button.addEventListener("mouseleave", () => {
+        button.style.backgroundColor = "#EFF5F5";
     })
-
 });
+
 
 
 console.log("1 + 2 = " + add(1, 2));
