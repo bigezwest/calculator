@@ -17,14 +17,31 @@ EB6440 - error
 */
 
 body {
-    width: 100%;
+    width: 98vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
 }
 
 #container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
     width: 40vw;
     height: 40vw;
     border: .1rem solid #D6E4E5;
     background-color: #EFF5F5;
+}
+
+.flex-button {
+    display: flex;
+    width: 8vw;
+    height: 8vw;
+    margin-top: .9vw;
+    border: .1rem solid #D6E4E5;
+    background-color: #EFF5F5;
+    justify-content: center;
+    align-items: center;
+    color: #497174;
 }
