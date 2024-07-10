@@ -29,7 +29,7 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     width: 40vw;
-    height: 40vw;
+    height: 50vw;
     border: .1rem solid #D6E4E5;
     background-color: #EFF5F5;
 }
