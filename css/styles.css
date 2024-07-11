@@ -37,15 +37,16 @@ body {
     display: flex;
     width: 8vw;
     height: 8vw;
-    border: .1rem solid #D6E4E5;
-    background-color: #EFF5F5;
     justify-content: center;
     align-items: center;
-    color: #497174;
 }
 button {
+    border: .25rem solid #D6E4E5;
+    background-color: #EFF5F5;
+    border-radius: 2vw;
     font-size: 3vw;
     padding: 2vw 3vw;
+    color: #497174;
 }
 
 #result textarea {
