@@ -40,7 +40,7 @@ function divide(a, b) {
     return a / b;
 }
 
-const textResult = document.querySelector('textarea');
+const calcDisplay = document.querySelector('textarea');
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener("mouseover", () => {
@@ -51,6 +51,6 @@ buttons.forEach((button) => {
     }),
     button.addEventListener("click", (event) => {
         let tempNum = event.target.innerHTML;
-        textResult.innerHTML = tempNum;
+        calcDisplay.innerHTML = tempNum;
     })
 });
