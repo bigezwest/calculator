@@ -49,6 +49,10 @@ button {
     border-radius: 2vw;
     font-size: 3vw;
 }
+button:hover{
+    background-color: #BFEAF5;
+}
+
 .input {
     border-radius: 2vw;
     font-size: 2vw;

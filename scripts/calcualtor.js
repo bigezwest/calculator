@@ -43,12 +43,6 @@ function divide(a, b) {
 const calcDisplay = document.querySelector('textarea');
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
-    button.addEventListener("mouseover", () => {
-        button.style.backgroundColor = "#BFEAF5";
-    }),
-    button.addEventListener("mouseleave", () => {
-        button.style.backgroundColor = "#EFF5F5";
-    }),
     button.addEventListener("click", (event) => {
         let tempNum = event.target.innerHTML;
         calcDisplay.innerHTML = tempNum;
