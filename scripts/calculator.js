@@ -20,7 +20,7 @@ function operate(num1, num2, operator) {
             return subtract(num1, num2);
             break;
         case ("*"):
-            multiply(num1, num2);
+            return multiply(num1, num2);
             break;
         case ("/"):
             divide(num1, num2);
@@ -39,7 +39,7 @@ function subtract(a, b) {
 }
 
 function multiply(a, b) {
-    return a * b;
+    return Number(a) * Number(b);
 }
 
 function divide(a, b) {
