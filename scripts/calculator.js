@@ -17,7 +17,7 @@ function operate(num1, num2, operator) {
             return add(num1, num2);
             break;
         case ("-"):
-            subtract(num1, num2);
+            return subtract(num1, num2);
             break;
         case ("*"):
             multiply(num1, num2);
@@ -35,7 +35,7 @@ function add(a, b) {
 }
 
 function subtract(a, b) {
-    return a - b;
+    return Number(a) - Number(b);
 }
 
 function multiply(a, b) {
