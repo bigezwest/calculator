@@ -92,12 +92,7 @@ opButtons.forEach((button) => {
 equalsButton.addEventListener("click", function() {
     let result = operate(num1, num2, operator);
     calcDisplay.innerHTML = result;
-    operator = null;
-    num2 = null;
-    num1 = result;
-    result = null;
-    isNum2Set = false;
-    isOperatorSet = false;
+    setContinueState(result);
 });
 
 // -- Clear Button - Event Listener --------------------------------------------
@@ -113,6 +108,15 @@ function setClearState() {
 
     calcDisplay.innerHTML = '';
     isNum1Set = false;
+    isNum2Set = false;
+    isOperatorSet = false;
+}
+
+function setContinueState(result) {
+    operator = null;
+    num2 = null;
+    num1 = result;
+    result = null;
     isNum2Set = false;
     isOperatorSet = false;
 }
