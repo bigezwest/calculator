@@ -1,16 +1,22 @@
 "use strict";
 
-// Variables to hold operations - use to display on calculator -----------------
+// Variables to hold operations - Query Selectors ------------------------------
 const calcDisplay = document.querySelector('textarea');
 const numButtons = document.querySelectorAll('.num_button');
 const opButtons = document.querySelectorAll('.op_button');
 const equalsButton = document.querySelector('.equals_button');
 const clearButton = document.querySelector('#clearBtn');
 
+// - Variables for operations --------------------------------------------------
 let num1 = null;
 let num2 = null;
 let operator = null;
 let result = null;
+
+// - Control Variables ---------------------------------------------------------
+let isNum1Set = false;
+let isNum2Set = false;
+let isOperatorSet = false;
 
 function operate(num1, num2, operator) {
     switch (operator) {
@@ -47,10 +53,8 @@ function divide(a, b) {
     return a / b;
 }
 
-let isNum1Set = false;
-let isNum2Set = false;
-let isOperatorSet = false;
 
+// -- Number button input - Event Listener -------------------------------------
 numButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
         let tempNum = event.target.innerHTML;
@@ -72,6 +76,7 @@ numButtons.forEach((button) => {
     })
 });
 
+// -- Operator buttons input - Event Listener ----------------------------------
 opButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
         if (isOperatorSet === false) {
@@ -83,11 +88,19 @@ opButtons.forEach((button) => {
     })
 });
 
+// -- Equals button input - Event Listener -------------------------------------
 equalsButton.addEventListener("click", function() {
     let result = operate(num1, num2, operator);
     calcDisplay.innerHTML = result;
+    operator = null;
+    num2 = null;
+    num1 = result;
+    result = null;
+    isNum2Set = false;
+    isOperatorSet = false;
 });
 
+// -- Clear Button - Event Listener --------------------------------------------
 clearButton.addEventListener("click", function() {
     num1 = null;
     num2 = null;
@@ -95,4 +108,7 @@ clearButton.addEventListener("click", function() {
     result = null;
 
     calcDisplay.innerHTML = '';
+    isNum1Set = false;
+    isNum2Set = false;
+    isOperatorSet = false;
 });
