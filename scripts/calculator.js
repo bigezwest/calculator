@@ -102,6 +102,10 @@ equalsButton.addEventListener("click", function() {
 
 // -- Clear Button - Event Listener --------------------------------------------
 clearButton.addEventListener("click", function() {
+    setClearState();
+});
+
+function setClearState() {
     num1 = null;
     num2 = null;
     operator = null;
@@ -111,4 +115,4 @@ clearButton.addEventListener("click", function() {
     isNum1Set = false;
     isNum2Set = false;
     isOperatorSet = false;
-});
+}
