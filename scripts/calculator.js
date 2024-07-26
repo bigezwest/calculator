@@ -5,6 +5,7 @@ const calcDisplay = document.querySelector('textarea');
 const numButtons = document.querySelectorAll('.num_button');
 const opButtons = document.querySelectorAll('.op_button');
 const equalsButton = document.querySelector('.equals_button');
+const clearButton = document.querySelector('#clearBtn');
 
 let num1 = null;
 let num2 = null;
@@ -85,4 +86,13 @@ opButtons.forEach((button) => {
 equalsButton.addEventListener("click", function() {
     let result = operate(num1, num2, operator);
     calcDisplay.innerHTML = result;
+});
+
+clearButton.addEventListener("click", function() {
+    num1 = null;
+    num2 = null;
+    operator = null;
+    result = null;
+
+    calcDisplay.innerHTML = '';
 });
