@@ -57,19 +57,20 @@ function divide(a, b) {
 // -- Number button input - Event Listener -------------------------------------
 numButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
-        let tempNum = event.target.innerHTML;
+        let userInput = event.target.innerHTML;
+
         if (!isNum1Set) {
             if (num1 === null) {
-                num1 = tempNum;
+                num1 = userInput;
             } else if (!isNum1Set) {
-                num1 += tempNum;
+                num1 += userInput;
             }
             calcDisplay.innerHTML = num1;
         } else if (isNum1Set) {
             if (num2 === null) {
-                num2 = tempNum;
+                num2 = userInput;
             } else if (!isNum2Set) {
-                num2 += tempNum;
+                num2 += userInput;
             }
             calcDisplay.innerHTML += num2;
         }
