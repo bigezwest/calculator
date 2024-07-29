@@ -30,7 +30,7 @@ function operate(num1, num2, operator) {
             return multiply(num1, num2);
             break;
         case ("/"):
-            divide(num1, num2);
+            return divide(num1, num2);
             break;
         default:
             /* Error and then clear or back up */
@@ -50,7 +50,7 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-    return a / b;
+    return Number(a) / Number(b);
 }
 
 
@@ -80,7 +80,7 @@ numButtons.forEach((button) => {
 opButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
         if (isOperatorSet === false) {
-            operator = event.target.innerHTML;
+            operator = event.target.innerText;
             isNum1Set = true;
         }
         calcDisplay.innerHTML += operator;
