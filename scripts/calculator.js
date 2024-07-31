@@ -59,21 +59,23 @@ numButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
         let userInput = event.target.innerHTML;
 
-        if (!isNum1Set) {
-            if (num1 === null) {
-                num1 = userInput;
-            } else if (!isNum1Set) {
-                num1 += userInput;
-            }
-            calcDisplay.innerHTML = num1;
-        } else if (isNum1Set) {
-            if (num2 === null) {
-                num2 = userInput;
-            } else if (!isNum2Set) {
-                num2 += userInput;
-            }
-            calcDisplay.innerHTML += num2;
-        }
+        checkOperationState(userInput);
+
+        // if (!isNum1Set) {
+        //     if (num1 === null) {
+        //         num1 = userInput;
+        //     } else if (!isNum1Set) {
+        //         num1 += userInput;
+        //     }
+        //     calcDisplay.innerHTML = num1;
+        // } else if (isNum1Set) {
+        //     if (num2 === null) {
+        //         num2 = userInput;
+        //     } else if (!isNum2Set) {
+        //         num2 += userInput;
+        //     }
+        //     calcDisplay.innerHTML += num2;
+        // }
     })
 });
 
@@ -120,4 +122,15 @@ function setContinueState(result) {
     result = null;
     isNum2Set = false;
     isOperatorSet = false;
+}
+
+function checkOperationState(userInput) {
+    if (!isNum1Set) {
+        if (num1 === null) {
+            num1 = userInput;
+        } else if (!isNum1Set) {
+            num1 += userInput;
+        }
+    }
+    calcDisplay.innerHTML = num1;
 }
